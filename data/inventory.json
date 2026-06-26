@@ -1,0 +1,10 @@
+[
+    {
+        "id": 1,
+        "name": "Sol Ring",
+        "category": "Magic Card",
+        "quantity": 1,
+        "location": "Commander Binder",
+        "notes": "First test item"
+    }
+]
