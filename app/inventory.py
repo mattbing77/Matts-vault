@@ -54,6 +54,22 @@ def get_next_id(inventory):
     highest_id = max(item.id for item in inventory)
     return highest_id + 1
 
+def get_valid_quantity():
+    while True:
+        user_input = input("Quantity: ").strip()
+
+        if not user_input.isdigit():
+            print("Error: Invalid quantity. Please enter a whole number.")
+            continue
+
+        quantity = int(user_input)
+
+        if quantity <= 0:
+            print("Error: Quantity must be greater than zero.")
+            continue
+
+        return quantity
+
 
 def add_item():
     inventory = load_inventory()
@@ -63,9 +79,15 @@ def add_item():
     print("      Add Item")
     print("=======================")
 
-    name = input("Item name: ")
+    while True:
+        name = input("Item name: ").strip()
+
+        if name:
+            break
+        
+        print("Error: Item name cannot be empty. Please enter an item name.")
     category = choose_category()
-    quantity = int(input("Quantity: "))
+    quantity = get_valid_quantity()    
     location = input("Location: ")
     notes = input("Notes: ")
 

@@ -22,5 +22,13 @@
         "quantity": 1,
         "location": "pantry",
         "notes": "5g daily"
+    },
+    {
+        "id": 4,
+        "name": "plain",
+        "category": "Magic Cards",
+        "quantity": 1,
+        "location": "card box",
+        "notes": "test"
     }
 ]

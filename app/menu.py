@@ -10,5 +10,5 @@ def display_menu():
     print("5. Delete Item")
     print("6. Exit")
     print()
-    choice = input("Choose an Option: ")
+    choice = input("Choose an Option: ").strip()
     return choice
