@@ -1,10 +1,26 @@
 [
     {
         "id": 1,
-        "name": "Sol Ring",
-        "category": "Magic Card",
+        "name": "Arcane Signet",
+        "category": "Magic Cards",
         "quantity": 1,
-        "location": "Commander Binder",
-        "notes": "First test item"
+        "location": "card box",
+        "notes": "ramp"
+    },
+    {
+        "id": 2,
+        "name": "Sentry #1(2026)",
+        "category": "Comics",
+        "quantity": 1,
+        "location": "bookshelf",
+        "notes": "variant coveer"
+    },
+    {
+        "id": 3,
+        "name": "creatine",
+        "category": "Gym",
+        "quantity": 1,
+        "location": "pantry",
+        "notes": "5g daily"
     }
 ]
