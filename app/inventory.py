@@ -1,4 +1,3 @@
-from app.storage import load_inventory
 from app.models import InventoryItem
 from app.storage import load_inventory, save_inventory
 
@@ -43,9 +42,13 @@ def choose_category():
     for number, category in categories.items():
         print(f"{number}. {category}")
 
-    choice = input("Choose a category: ")
+    while True:
+        choice = input("Choose a category: ").strip()
 
-    return categories.get(choice, "Other")
+    if choice in categories:
+        return categories[choice]
+
+    print("Error: Invalid category. Please enter a number between 1 and 6.")
 
 def get_next_id(inventory):
     if not inventory:
@@ -105,4 +108,54 @@ def add_item():
 
     print()
     print("Item added successfully!")
+    input("Press Enter to continue...")
+def search_inventory():
+    inventory = load_inventory()
+
+    print()
+    print("=======================")
+    print("   Search Inventory")
+    print("=======================")
+
+    if not inventory:
+        print("No items found.")
+        input("Press Enter to continue...")
+        return
+
+    while True:
+        search_term = input(
+            "Search by name, category, or location: "
+        ).strip().lower()
+
+        if search_term:
+            break
+
+        print("Error: Search cannot be empty. Please enter a search term.")
+
+    results = []
+
+    for item in inventory:
+        if (
+            search_term in item.name.lower()
+            or search_term in item.category.lower()
+            or search_term in item.location.lower()
+        ):
+            results.append(item)
+
+    if not results:
+        print("No matching items found.")
+    else:
+        print()
+        print("Search Results")
+        print("-----------------------")
+
+        for item in results:
+            print(f"ID: {item.id}")
+            print(f"Name: {item.name}")
+            print(f"Category: {item.category}")
+            print(f"Quantity: {item.quantity}")
+            print(f"Location: {item.location}")
+            print(f"Notes: {item.notes}")
+            print("-----------------------")
+
     input("Press Enter to continue...")

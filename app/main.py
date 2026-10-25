@@ -1,6 +1,6 @@
 from app.menu import display_menu
-from app.inventory import view_inventory
-from app.inventory import view_inventory, add_item
+
+from app.inventory import view_inventory, add_item, search_inventory
 
 
 def main():
@@ -13,7 +13,7 @@ def main():
         elif choice == "2":
             add_item()
         elif choice == "3":
-            print("You Chose Search Inventory")
+            search_inventory()
         elif choice == "4":
             print("You Chose Update Item")
         elif choice == "5":
