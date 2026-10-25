@@ -1,19 +1,11 @@
 [
     {
         "id": 1,
-        "name": "Arcane Signet",
+        "name": "Arcane signet",
         "category": "Magic Cards",
-        "quantity": 1,
+        "quantity": 3,
         "location": "card box",
         "notes": "ramp"
-    },
-    {
-        "id": 2,
-        "name": "Sentry #1(2026)",
-        "category": "Comics",
-        "quantity": 1,
-        "location": "bookshelf",
-        "notes": "variant coveer"
     },
     {
         "id": 3,
@@ -30,5 +22,13 @@
         "quantity": 1,
         "location": "card box",
         "notes": "test"
+    },
+    {
+        "id": 5,
+        "name": "Daredevil Omnibus Vol. 1",
+        "category": "Comics",
+        "quantity": 1,
+        "location": "Comic Box",
+        "notes": "Chip Zdarsky"
     }
 ]
